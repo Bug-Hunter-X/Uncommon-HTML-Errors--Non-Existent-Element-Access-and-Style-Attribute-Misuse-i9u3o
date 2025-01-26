@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Attempting to access a non-existent element
+    document.getElementById("myDiv").innerHTML = "<p>This should be inside the div.</p>";
+
+    //Another issue: Incorrect use of the style attribute
+    //The following line will attempt to access the non-existent element again.
+    document.getElementById("myDiv").style.color = "blue"; 
+    //Use className instead if adding classes
+    // document.getElementById("myDiv").className += "blue";
+
+     //Another issue: missing closing tag
+     <p>This paragraph is missing a closing tag</p>
+  </script>
+</body>
+</html>
