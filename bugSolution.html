@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+<style>
+  .blue {
+    color: blue;
+  }
+</style>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //Ensure element exists before manipulating
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+      myDiv.innerHTML = "<p>This is inside the div.</p>";
+      myDiv.classList.add("blue"); //Correct way to add a class and apply styles
+    } else {
+      console.error("Element with id 'myDiv' not found.");
+    }
+  </script>
+  <p>This paragraph is correctly closed.</p>  </body>
+</html>
